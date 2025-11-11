@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Constance - Security Demo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Constance N Nyamuzibwa</h1>
+        <p>Cybersecurity Awareness Platform</p>
+    </header>
+
+    <div class="container">
+        <!-- SECURITY DEMO SECTION -->
+        <section class="demo-section">
+            <h2>🔒 Cybersecurity Demo</h2>
+            
+            <div class="demo-card">
+                <h3>Password Strength Analyzer</h3>
+                <input type="password" id="passwordInput" placeholder="Type a password to test" class="password-input">
+                <div class="strength-meter">
+                    <div class="strength-bar" id="strengthBar"></div>
+                </div>
+                <p id="strengthText" class="strength-text">Password strength will appear here</p>
+            </div>
+
+            <div class="demo-card">
+                <h3>Website Safety Check</h3>
+                <input type="text" id="websiteInput" placeholder="Enter website URL (e.g., https://example.com)" class="website-input">
+                <button onclick="checkWebsite()" class="check-btn">Check Safety</button>
+                <p id="safetyResult" class="safety-result"></p>
+            </div>
+        </section>
+
+        <!-- CONTACT FORM SECTION -->
+        <section class="contact-section">
+            <h2>📧 Secure Contact Form</h2>
+            <div class="demo-card">
+                <form id="contactForm" class="contact-form">
+                    <input type="text" name="name" placeholder="Your Name" required class="form-input">
+                    <input type="email" name="email" placeholder="Your Email" required class="form-input">
+                    <textarea name="message" placeholder="Your Message" required class="form-textarea"></textarea>
+                    <button type="submit" class="submit-btn">Send Securely</button>
+                </form>
+                <p id="formMessage" class="form-message"></p>
+            </div>
+        </section>
+
+        <!-- DATABASE EXPLANATION -->
+        <section class="database-section">
+            <h2>🗄️ Database Security</h2>
+            <div class="demo-card">
+                <h3>MySQL Backend Ready</h3>
+                <p>This form connects to a MySQL database using <strong>Prepared Statements</strong> to prevent SQL injection attacks.</p>
+                <div class="code-block">
+                    <pre>// Java Prepared Statement Example:
+String sql = "INSERT INTO contacts (name, email, message) VALUES (?, ?, ?)";
+PreparedStatement stmt = connection.prepareStatement(sql);
+stmt.setString(1, name);  // User input safely handled
+stmt.setString(2, email);
+stmt.setString(3, message);</pre>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
